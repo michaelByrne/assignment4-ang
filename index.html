@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+  <head>
+    <meta charset="utf-8">
+    <script src="./lib/jquery/dist/jquery.js" ></script>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="./lib/x-editable/dist/bootstrap-editable/css/bootstrap-editable.css" />
+    <script src="./lib/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>Food Units</title>
+</head>
+  <body>
+  <div class="container">
+    <div class="page-header row" id="top-bar"><div class="col-md-5"><h2>Total DinnerTime Industries Menu Application</h2></div></div>
+  </div>
+
+    <div id="view-pos" style="padding-left: 100px"><ui-view></ui-view></div>
+
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/menuapp/menuapp.module.js"></script>
+    <script src="src/data/menudata.module.js"></script>
+
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
+
+    <!-- 'ShoppingList' module artifacts -->
+
+    <script src="src/menuapp/main-menuapp.controller.js"></script>
+    <script src="src/menuapp/catdetail.controller.js"></script>
+    <script src="src/menuapp/categories.component.js"></script>
+    <script src="src/menuapp/items.component.js"></script>
+    <script src="src/menuapp/catdetail.controller.js"></script>
+
+
+  </body>
+</html>

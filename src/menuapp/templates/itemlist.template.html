@@ -1,0 +1,9 @@
+<div id="view-pos">
+<a ui-sref="home">Home</a> &lt; <a ui-sref="mainList">List</a> &lt; <span>Category {{$ctrl.item.category.name}}</span>
+<h3>{{$ctrl.item.category.name}}</h3>
+<ul>
+  <li ng-repeat="menuItem in $ctrl.item.menu_items">
+    {{menuItem.name}}
+  </li>
+</ul>
+</div>

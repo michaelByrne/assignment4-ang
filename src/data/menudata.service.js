@@ -1,35 +1,13 @@
 (function () {
     'use strict';
+
+   
+
     angular.module('Data')
         .service('MenuDataService', MenuDataService)
         .constant('ApiBasePath', "http://davids-restaurant.herokuapp.com");
 
 
-    MenuDataController.$inject = ['MenuDataService'];
-    function MenuDataController(MenuDataService) {
-        var menu = this;
-
-        var promise = MenuDataService.getMenuCategories();
-
-        promise.then(function (response) {
-                menu.categories = response.data;
-            })
-            .catch(function (error) {
-                console.log("Something went terribly wrong.");
-            });
-
-        menu.logMenuItems = function (shortName) {
-            var promise = MenuDataService.getMenuForCategory(shortName);
-
-            promise.then(function (response) {
-                    console.log(response.data);
-                })
-                .catch(function (error) {
-                    console.log(error);
-                })
-        };
-
-    }
 
 
     MenuDataService.$inject = ['$http', 'ApiBasePath'];
